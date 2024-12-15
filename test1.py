@@ -107,7 +107,7 @@ from transformers import AutoTokenizer
 from mamba2_torch import Mamba2ForCausalLM
 
 device = "cuda"
-mamba2_hf_path = "/home/dettrax/PycharmProjects/mamba2-torch/models/mamba2-130m"
+mamba2_hf_path = "/home/dettrax/PycharmProjects/mamba2-torch/models/mamba2-1.7b"
 
 model = Mamba2ForCausalLM.from_pretrained(mamba2_hf_path, local_files_only=True).to(device)
 tokenizer = AutoTokenizer.from_pretrained(mamba2_hf_path, local_files_only=True)
@@ -130,7 +130,7 @@ train_dataset, valid_dataset = prepare_data(tokenizer)
 
 # Training arguments
 training_args = TrainingArguments(
-    output_dir="./gpt2-truthful",
+    output_dir="./mamba2-truthful",
     overwrite_output_dir=True,
     num_train_epochs=10,
     per_device_train_batch_size=8,

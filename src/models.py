@@ -16,7 +16,7 @@ from transformers import AutoTokenizer
 from mamba2_torch import Mamba2Model, Mamba2ForCausalLM, Mamba2Config
 
 device = "cuda"
-mamba2_hf_path = "/home/dettrax/PycharmProjects/mamba2-torch/models/mamba2-130m"
+mamba2_hf_path = "/home/dettrax/PycharmProjects/mamba2-torch/models/mamba2-1.7b"
 
 
 logger = logging.getLogger(__name__)
